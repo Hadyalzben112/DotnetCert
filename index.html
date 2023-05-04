@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        .ptest {
+            background-color: red;
+        }
+
+        .imageicon {
+
+            width: 40px;
+            height: 40px;
+        }
+
+
+        .logoimage {
+            padding-right: 30px;
+            width: 20px;
+            height: 20px;
+        }
+
+
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.5;
+            margin: 20px;
+        }
+
+        header {
+            background-color: #eee;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav {
+            display: inline-block;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+        }
+
+        a:hover {
+            color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logoimage" src="https://png.pngtree.com/element_pic/16/11/03/dda587d35b48fd01947cf38931323161.jpg"
+            alt="My Website Logo">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <img style="width: 150px;height: 150px;"
+            src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
+            alt="A Beautiful Image">
+
+        <p id="peh" class="ptest">Test p</p>
+        <input type="text" id="text" placeholder="Enter Text to alert it "><br><br>
+
+        <button onclick="alertinput()">Click me</button>
+        <button onclick="changerandom()">Change random color me</button>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+        <a href="https://www.facebook.com/mywebsite"><img class="imageicon"
+                src="https://www.facebook.com/images/fb_icon_325x325.png" alt="Facebook Icon"></a>
+
+        <a href="https://www.facebook.com/mywebsite"><img class="imageicon"
+                src="https://static.cdninstagram.com/rsrc.php/v3/yb/r/lswP1OF1o6P.png" alt="Facebook Icon"></a>
+
+        <a href="https://www.facebook.com/mywebsite"><img class="imageicon"
+                src="https://abs.twimg.com/responsive-web/client-web/icon-ios.b1fc727a.png" alt="Facebook Icon"></a>
+    </footer>
+</body>
+
+
+
+</html>
+
+
+<script>
+    function changerandom() {
+        document.getElementById("peh").style.backgroundColor = getRandomColor();
+    }
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function alertinput() {
+        alert(document.getElementById("text").value);
+        document.getElementById("text").value = "";
+    }
+</script>
